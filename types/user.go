@@ -1,6 +1,7 @@
-package user
+package types
 
 type User struct {
-	Name string
-	Age  int
+	Name  string `json:"name"`
+	Age   int    `json:"id"`
+	Email string `json:"email"`
 }
