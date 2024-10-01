@@ -20,5 +20,5 @@ func HandleEchoUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintf(w, "this is the name: %s", user.Name)
+	fmt.Fprintf(w, "this is the email: %s", user.Email)
 }
