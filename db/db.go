@@ -14,7 +14,7 @@ func Open() (*sql.DB, error) {
 		return nil, err
 	}
 
-	db, err := sql.Open("sqlite3", ":memory")
+	db, err := sql.Open("sqlite3", "database")
 
 	if err != nil {
 		return nil, err

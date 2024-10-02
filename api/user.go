@@ -71,8 +71,7 @@ func (u *UserHandler) HandlerLoginUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	isValid := types.ValidatePassword(user.PasswordHash, loginParams.Password)
-	if isValid == false {
+	if !types.ValidatePassword(user.PasswordHash, loginParams.Password) {
 		http.Error(w, "invalid email or password", http.StatusBadRequest)
 		return
 	}
